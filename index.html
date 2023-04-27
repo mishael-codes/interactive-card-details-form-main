@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <!-- the backgroung image goes to this element -->
+        <!-- mark-up of the card -->
+        <div class="card card-back">
+          <img src="images/bg-card-back.png" alt="back of the debit card" />
+          <p id="cvc">000</p>
+        </div>
+        <div class="card card-front">
+          <img src="images/bg-card-front.png" alt="front of the debit card" />
+          <div class="profile-image-container">
+            <img src="images/card-logo.svg" alt="" />
+          </div>
+          <div class="card-info">
+            <p id="card-number">0000 0000 0000 0000</p>
+            <div class="extra-info">
+              <h1 id="card-name">ANIKA GOYETTE</h1>
+              <p id="card-expiry-date">00/00</p>
+            </div>
+          </div>
+        </div>
+        <!-- done with the card -->
+      </section>
+      <!-- done with the top section of the page -->
+      <section class="user-info">
+        <form>
+          <label for="name"
+            >CARDHOLDER NAME
+            <br />
+            <input type="text" id="name" placeholder="e.g. Anika Goyette" />
+            <p class="warning" id="name-warning">Can&apos;t be blank</p>
+          </label>
+          <label for="number"
+            >CARD NUMBER
+            <br />
+            <input
+              type="number"
+              id="number"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <p class="warning" id="number-warning">Can&apos;t be blank</p>
+          </label>
+
+          <div class="bottom-form">
+            <label for="exp-date"
+              >EXP. DATE (MM/YY)
+              <br />
+              <input type="number" id="month" placeholder="MM" />
+              <input type="number"id="year" placeholder="YY" />
+            <p class="warning" id="date-warning">Can&apos;t be blank</p>
+            </label>
+            <label for="cvc-input"
+              >CVC
+              <br />
+              <input type="number" id="cvc-input" placeholder="e.g. 123" />
+            <p class="warning" id="cvc-warning">Can&apos;t be blank</p>
+            </label>
+          </div>
+          <button type="submit" class="btn">Confirm</button>
+        </form>
+      </section>
+
+      <!-- Should be shown if card input was successful -->
+      <section class="successful">
+        <img id="tick-icon" src="images/icon-complete.svg" alt="tick-icon">
+        <h2 id="thank-you">THANK YOU</h2>
+        <p>We have added your card details</p>
+        <button class="btn" id="continue">Continue</button>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://mishaelenyi.netlify.app">Mishael Enyi</a>.
+    </div>
+  </body>
+</html>
